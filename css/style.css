@@ -1,3 +1,22 @@
 #nav {
   font-size: 11px;
 }
+
+#nav .navbar {
+  background: none;
+  min-height: 50px;
+}
+
+#nav .navbar-toggler {
+  background: black;
+}
+
+.rotated {
+  transform: rotate(-90deg);
+  position: fixed;
+  left: 0;
+  bottom: 100px;
+}
+.rotated li, .rotated ul, .rotated span{
+  display: inline-block;
+}
