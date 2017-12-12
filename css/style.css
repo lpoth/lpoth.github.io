@@ -1,82 +1,234 @@
 * {
   font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+  font-size: 12px;
 }
 
-#nav {
-  font-size: 11px;
+body {
+  background-color: #fffef6;
 }
 
-#nav .navbar {
-  background: none;
-  min-height: 50px;
+
+/** -------------------------------- Afbeeldingen **/
+
+img {
+  width: 100%;
 }
 
-#nav .navbar-toggler {
-  background: black;
+
+/** -------------------------------- Navigatiebalk **/
+
+.navbar-nav {
+  text-align: center;
 }
 
-.rotated {
-  transform: rotate(-90deg);
-  position: fixed;
-  left: -120px;
-  bottom: 250px;
-}
-.rotated li, .rotated ul, .rotated span{
-  display: inline-block;
+.navbar a {
+  color: #ed6e2c;
+  font-size: 12px;
 }
 
-h4, h1, h2, h3 {
+.bg-faded {
+  background-color: transparent
+}
+
+.navbar {
+  padding: 0;
+  margin-top: 40px;
+  margin-bottom: -10px;
+}
+
+.navbar-toggleable-md .navbar-nav .nav-link {
+  padding-right: 14px;
+   padding-left: 0;
+}
+
+/** -------------------------------- Footer **/
+
+.mobile-footer {
+  color: #ed6e2c;
+}
+
+/** -------------------------------- Titels **/
+
+h4,
+h1,
+h2,
+h3 {
   font-family: 'Domine', serif;
 }
 
 h1 {
   font-size: 50px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.hoofdtitel {
+  margin-top: 20px;
+  margin-bottom:20px;
 }
 
 h2 {
   font-weight: bold;
 }
 
-
-
 hr {
   border-color: black;
 }
 
-.footer, a {
+.footer span {
   color: #ed6e2c;
 }
 
-#facebook {
+.facebook {
   background-image: url("../images/facebook.png");
   background-size: cover;
+  width: 20px;
+  height:20px;
+  display:inline-block;
+  margin-left:4px;
 }
 
-#instagram {
+.instagram {
   background-image: url("../images/instagram.png");
   background-size: cover;
+  width: 20px;
+  height:20px;
+  display:inline-block;
 }
 
-#twitter {
+.twitter {
   background-image: url("../images/twitter.png");
   background-size: cover;
+  width: 20px;
+  height:20px;
+  display:inline-block;
+  margin-left:5px;
 }
 
-#logo {
-  margin-top:-11px;
-  margin-bottom: -10px;
+.logo {
+  margin-top: -11px;
+  margin-bottom: -8px;
 }
 
 .header {
-  margin-bottom:50px;
+  margin-bottom: 50px;
 }
 
-#nav a div{
-  font-size:10px;
-}
-
-.rotated li, .rotated span {
+.rotated li,
+.rotated span {
   font-size: 20px;
 }
 
+/** -------------------------------- Over **/
+
+.tussentitel {
+  margin-top:30px;
+  margin-bottom: 10px;
+}
+
+.padding-rechts {
+  padding-right: 3px;
+  margin-top: 10px;
+}
+
+.padding-links {
+  padding-left: 3px;
+  margin-top: 10px;
+}
+
+#over-onderste {
+  margin-top:6px;
+  margin-bottom: 20px;
+}
+
+/** -------------------------------- Kalender **/
+
+.fotos-onder {
+  margin-top:20px;
+}
+
+.quote {
+  text-align:center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.laatste {
+  margin-bottom: 20px;
+}
+
+/** ---------------------------------------------------------------------- DESKTOP **/
+
+@media screen and (min-width: 480px) {
+
+  * {
+    font-size: 15px;
+  }
+
+  .hoofdtitel {
+    padding-bottom: 70px;
+  }
+
+  /** -------------------------------- Footer desktop**/
+
+  .rotated {
+    transform: rotate(-90deg);
+    position: fixed;
+    left: -120px;
+    bottom: 250px;
+  }
+  
+  .rotated li,
+  .rotated ul,
+  .rotated span {
+    display: inline-block;
+  }
+
+  /** -------------------------------- Home desktop **/
+
+  #home_foto {
+    margin-top:70px;
+  }
+
+  /** -------------------------------- Over desktop **/
+
+  .hoofdtitel {
+    margin-top:70px;
+    margin-bottom:30px;
+  }
+
+  .over-foto {
+    margin-top:30px;
+  }
+
+  .tussentitel {
+    margin-top: 40px;
+  }
+
+  .padding-links {
+    padding-left: 15px;
+    margin-top: 20px;
+  }
+  
+  .padding-rechts {
+    padding-right: 15px;
+    margin-top: 20px;
+  }
+
+  #over-onderste {
+    margin-bottom: 70px;
+    margin-top: 30px;
+  }
+
+  /** -------------------------------- Foto's desktop **/
+
+  #quote3 {
+    margin-top:-15px;
+  }
+
+  .laatste {
+    padding-bottom: 150px;
+  }
+
+
+}
