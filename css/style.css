@@ -1,3 +1,8 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
 #nav {
   font-size: 11px;
 }
@@ -14,9 +19,64 @@
 .rotated {
   transform: rotate(-90deg);
   position: fixed;
-  left: 0;
-  bottom: 100px;
+  left: -120px;
+  bottom: 250px;
 }
 .rotated li, .rotated ul, .rotated span{
   display: inline-block;
 }
+
+h4, h1, h2, h3 {
+  font-family: 'Domine', serif;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+
+
+hr {
+  border-color: black;
+}
+
+.footer, a {
+  color: #ed6e2c;
+}
+
+#facebook {
+  background-image: url("../images/facebook.png");
+  background-size: cover;
+}
+
+#instagram {
+  background-image: url("../images/instagram.png");
+  background-size: cover;
+}
+
+#twitter {
+  background-image: url("../images/twitter.png");
+  background-size: cover;
+}
+
+#logo {
+  margin-top:-11px;
+  margin-bottom: -10px;
+}
+
+.header {
+  margin-bottom:50px;
+}
+
+#nav a div{
+  font-size:10px;
+}
+
+.rotated li, .rotated span {
+  font-size: 20px;
+}
+
