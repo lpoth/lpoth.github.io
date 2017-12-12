@@ -7,17 +7,29 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Document Titel</title>
+    <style>
+        #map {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            z-index: 0;
+        }
+    </style>
 </head>
 
 <body>
     <!-- content -->
     <div class="container">
-        <div class="row" id="nav">
-            <div class="col-md-2 col-0"></div>
-            <div class="col-md-8 col-12">
+        <!-- begin header -->
+        <div class="row" id="header">
+            <div class="col-md-2 col-sm-0"></div>
+            <div class="col-md-8 col-sm-12">
                 <div class="row">
-                    <div class="col-md-8 col-0"></div>
-                    <div class="col-md-4 col-12">
+                    <div class="col-md-8 col-sm-0"></div>
+                    <div class="col-md-4 col-sm-12">
+                        <!-- begin navigatiebar -->
                         <div class="row" id="nav" style="padding-top: 30px;">
                             <a href="index.html">
                                 <div class="col-2">Home</div>
@@ -38,28 +50,21 @@
                                 <div class="col-2">Contact</div>
                             </a>
                         </div>
+                        <!-- einde navigatiebar -->
+                        <!-- begin logo + lijnen -->
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-md-12">
                                 <hr>
-                                <div style="height:80px; width:100%; background-color:yellow;"></div>
+                                <img id="logo" src="images/Logo.PNG" alt="Logo" style="width:100%">
                                 <hr>
                             </div>
                         </div>
-                        <div class="row" style="padding-left:20px;">
-                            <div class="col-1" style="border:1px solid green; height:30px"></div>
-                            <div class="col-1" style="border:1px solid red"></div>
-                            <div class="col-1" style="border:1px solid purple"></div>
-                            <div class="col-9"></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <hr>
-                            </div>
-                        </div>
+                        <!-- einde logo + lijnen -->
                     </div>
                 </div>
             </div>
         </div>
+        <!-- einde header, begin content -->
         <div class="row">
             <div class="col-md-2 col-0"></div>
             <div class="col-md-8 col-12">
@@ -73,43 +78,412 @@
                 </div>
                 <div class="row" style="margin-bottom:30px">
                     <div class="col-md-6 col-8">
-                        <h5>Ons contacteren is gemakkelijk!</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos sit, consequatur commodi, numquam
-                            ipsam officia nostrum libero, accusamus suscipit repudiandae doloremque? Accusamus, repellendus?
-                            Quisquam optio quos doloremque soluta fuga voluptatem.</p>
+                        <h5>Ons boeken of contacteren is gemakkelijk!</h5>
+                        <p>Hebt u een vraag voor ons of wil u ons boeken? Mail ons dan gerust! Wij staan zeker open voor nieuwe
+                            ideeën, ervaringen en evenementen. Aarzel niet om contact met ons op te nemen, wij doen er alles
+                            aan om aan al uw wensen te voldoen.</p>
                         <p>info@krok.be</p>
                     </div>
                     <div class="col-md-2 hidden-md-down"></div>
                     <div class="col-8 offset-4 offset-sm-0 col-sm-4">
                         <div style="height: 150px; "></div>
-                        <div style="height: 150px; border:1px solid blue"></div>
+                        <img src="images/Foodrtruck_ZW.jpg" alt="onze foodtruck" style="width:100%">
                     </div>
                 </div>
                 <div class="row" style="margin-bottom:40px;">
                     <div class="col-md-3 col-0"></div>
                     <div class="col-md-9 col-12">
                         <div style="height: 250px; border:1px solid blue"></div>
+                        <div id="map"></div>
+                        <script src="https://maps.googleapis.com/maps/api/js"></script>
+                        <script>
+                            // laad de kaart in als GoogleMapsAPI volledig geladen is
+                            google.maps.event.addDomListener(window, 'load', initMap);
+                    
+                            
+                    
+                          function initMap() {
+                    
+                              var styles = [
+                              {
+                                  "featureType": "all",
+                                  "elementType": "geometry",
+                                  "stylers": [
+                                      {
+                                          "color": "#ffffff"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "all",
+                                  "elementType": "labels.text.fill",
+                                  "stylers": [
+                                      {
+                                          "gamma": 0.01
+                                      },
+                                      {
+                                          "lightness": 20
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "all",
+                                  "elementType": "labels.text.stroke",
+                                  "stylers": [
+                                      {
+                                          "saturation": -31
+                                      },
+                                      {
+                                          "lightness": -33
+                                      },
+                                      {
+                                          "weight": 2
+                                      },
+                                      {
+                                          "gamma": 0.8
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "all",
+                                  "elementType": "labels.icon",
+                                  "stylers": [
+                                      {
+                                          "visibility": "off"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "administrative.locality",
+                                  "elementType": "labels.text.fill",
+                                  "stylers": [
+                                      {
+                                          "color": "#050505"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "administrative.locality",
+                                  "elementType": "labels.text.stroke",
+                                  "stylers": [
+                                      {
+                                          "color": "#fef3f3"
+                                      },
+                                      {
+                                          "weight": "3.01"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "administrative.neighborhood",
+                                  "elementType": "labels.text.fill",
+                                  "stylers": [
+                                      {
+                                          "color": "#0a0a0a"
+                                      },
+                                      {
+                                          "visibility": "off"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "administrative.neighborhood",
+                                  "elementType": "labels.text.stroke",
+                                  "stylers": [
+                                      {
+                                          "color": "#fffbfb"
+                                      },
+                                      {
+                                          "weight": "3.01"
+                                      },
+                                      {
+                                          "visibility": "off"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "landscape",
+                                  "elementType": "geometry",
+                                  "stylers": [
+                                      {
+                                          "lightness": 30
+                                      },
+                                      {
+                                          "saturation": 30
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "poi",
+                                  "elementType": "geometry",
+                                  "stylers": [
+                                      {
+                                          "saturation": 20
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "poi.attraction",
+                                  "elementType": "labels.icon",
+                                  "stylers": [
+                                      {
+                                          "visibility": "off"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "poi.park",
+                                  "elementType": "geometry",
+                                  "stylers": [
+                                      {
+                                          "lightness": 20
+                                      },
+                                      {
+                                          "saturation": -20
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "road",
+                                  "elementType": "geometry",
+                                  "stylers": [
+                                      {
+                                          "lightness": 10
+                                      },
+                                      {
+                                          "saturation": -30
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "road",
+                                  "elementType": "geometry.stroke",
+                                  "stylers": [
+                                      {
+                                          "saturation": 25
+                                      },
+                                      {
+                                          "lightness": 25
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "road.highway",
+                                  "elementType": "geometry.fill",
+                                  "stylers": [
+                                      {
+                                          "visibility": "on"
+                                      },
+                                      {
+                                          "color": "#a1a1a1"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "road.highway",
+                                  "elementType": "geometry.stroke",
+                                  "stylers": [
+                                      {
+                                          "color": "#292929"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "road.highway",
+                                  "elementType": "labels.text.fill",
+                                  "stylers": [
+                                      {
+                                          "visibility": "on"
+                                      },
+                                      {
+                                          "color": "#202020"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "road.highway",
+                                  "elementType": "labels.text.stroke",
+                                  "stylers": [
+                                      {
+                                          "visibility": "on"
+                                      },
+                                      {
+                                          "color": "#ffffff"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "road.highway",
+                                  "elementType": "labels.icon",
+                                  "stylers": [
+                                      {
+                                          "visibility": "simplified"
+                                      },
+                                      {
+                                          "hue": "#0006ff"
+                                      },
+                                      {
+                                          "saturation": "-100"
+                                      },
+                                      {
+                                          "lightness": "13"
+                                      },
+                                      {
+                                          "gamma": "0.00"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "road.arterial",
+                                  "elementType": "geometry.fill",
+                                  "stylers": [
+                                      {
+                                          "visibility": "on"
+                                      },
+                                      {
+                                          "color": "#686868"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "road.arterial",
+                                  "elementType": "geometry.stroke",
+                                  "stylers": [
+                                      {
+                                          "visibility": "off"
+                                      },
+                                      {
+                                          "color": "#8d8d8d"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "road.arterial",
+                                  "elementType": "labels.text.fill",
+                                  "stylers": [
+                                      {
+                                          "visibility": "on"
+                                      },
+                                      {
+                                          "color": "#353535"
+                                      },
+                                      {
+                                          "lightness": "6"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "road.arterial",
+                                  "elementType": "labels.text.stroke",
+                                  "stylers": [
+                                      {
+                                          "visibility": "on"
+                                      },
+                                      {
+                                          "color": "#ffffff"
+                                      },
+                                      {
+                                          "weight": "3.45"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "road.local",
+                                  "elementType": "geometry.fill",
+                                  "stylers": [
+                                      {
+                                          "color": "#d0d0d0"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "road.local",
+                                  "elementType": "geometry.stroke",
+                                  "stylers": [
+                                      {
+                                          "lightness": "2"
+                                      },
+                                      {
+                                          "visibility": "on"
+                                      },
+                                      {
+                                          "color": "#999898"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "road.local",
+                                  "elementType": "labels.text.fill",
+                                  "stylers": [
+                                      {
+                                          "color": "#383838"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "road.local",
+                                  "elementType": "labels.text.stroke",
+                                  "stylers": [
+                                      {
+                                          "color": "#faf8f8"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "transit.line",
+                                  "elementType": "geometry.fill",
+                                  "stylers": [
+                                      {
+                                          "visibility": "on"
+                                      },
+                                      {
+                                          "color": "#000000"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "featureType": "water",
+                                  "elementType": "all",
+                                  "stylers": [
+                                      {
+                                          "lightness": -20
+                                      }
+                                  ]
+                              }
+                          ]
+                            var Kroks = {lat: 50.908130, lng: 3.520413};
+                            var map = new google.maps.Map(document.getElementById('map'), {
+                              zoom: 10,
+                              center: Kroks,
+                              styles: styles
+                            });
+                            var marker = new google.maps.Marker({
+                              position: Kroks,
+                              map: map
+                            });
+                          }
+                        </script>
                     </div>
                 </div>
                 <div class="row">
-                        <div class="col-sm-12 hidden-md-up">
-                            <hr>
-                            <p>Hier komt een call to action, link naar de nieuwsbrief en een link naar het productiedossier</p>
-                            <hr style="margin-bottom:70px">
-    
-                        </div>
+                    <div class="col-sm-12 hidden-md-up">
+                        <hr>
+                        <p>Hier komt een call to action, link naar de nieuwsbrief en een link naar het productiedossier</p>
+                        <hr style="margin-bottom:70px">
+
                     </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="rotated hidden-sm-down">
-            <ul class="social">
-                <li>fb</li>
-                <li>tw</li>
-                <li>in</li>
-            </ul>
-            <span>Lotte enzoverder</span>
-        </div>
+    <!-- begin footer -->
+    <div class="rotated hidden-sm-down footer">
+        <span id="facebook" style="width:20px; height:20px; "></span>
+        <span id="instagram" style="width:20px; height:20px; "></span>
+        <span id="twitter" style="width:20px; height:20px; "></span>
+        <span>| Productiedossier | Boek ons nu!</span>
+    </div>
+    <!-- einde footer -->
     <!-- end content -->
     <!-- Bootstrap core JavaScript
                       ================================================== -->
