@@ -157,6 +157,20 @@ hr {
   margin-bottom: 20px;
 }
 
+/** -------------------------------- Contact **/
+
+#foodtruck {
+  height: 20%;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+#kaart {
+  margin-left:15px;
+  margin-right:15px;
+  height: 250px;
+}
+
 /** ---------------------------------------------------------------------- DESKTOP **/
 
 @media screen and (min-width: 480px) {
@@ -230,5 +244,14 @@ hr {
     padding-bottom: 150px;
   }
 
+   /** -------------------------------- Foto's contact **/
 
+  #foodtruck {
+    margin-top:10px;
+  }
+
+  #kaart {
+    padding:0;
+    margin:O;
+  }
 }

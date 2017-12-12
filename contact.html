@@ -88,23 +88,21 @@
                         <hr>
                     </div>
                 </div>
-                <div class="row" style="margin-bottom:30px">
+                <div class="row">
                     <div class="col-sm-6 col-8">
                         <h5>Ons boeken of contacteren is gemakkelijk!</h5>
                         <p>Hebt u een vraag voor ons of wil u ons boeken? Mail ons dan gerust! Wij staan zeker open voor nieuwe
                             ideeën, ervaringen en evenementen. Aarzel niet om contact met ons op te nemen, wij doen er alles
                             aan om aan al uw wensen te voldoen.</p>
-                        <p>info@krok.be</p>
+                        <p>info@kroks.be</p>
                     </div>
-                    <div class="col-sm-2 hidden-sm-down"></div>
-                    <div class="col-8 offset-4 offset-sm-0 col-sm-4">
-                        <div style="height: 150px; "></div>
-                        <img src="images/Foodrtruck_ZW.jpg" alt="onze foodtruck" style="width:100%">
+                    <div class="col-8 offset-4 offset-sm-6 col-sm-4">
+                        <img id="foodtruck" src="images/Foodrtruck_ZW.jpg" alt="onze foodtruck" style="width:100%">
                     </div>
                 </div>
-                <div class="row" style="margin-bottom:40px;">
-                    <div class="col-sm-9 offset-sm-3 col-12offset-0">
-                        <div style="height: 250px;"></div>
+                <div class="laatste row" style="margin-bottom:40px;">
+                    <div class="col-sm-8 offset-sm-4 col-12 offset-0" id="kaart">
+                        <div ></div>
                         <div id="map"></div>
                         <script src="https://maps.googleapis.com/maps/api/js"></script>
                         <script>
@@ -476,22 +474,30 @@
                         </script>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12 hidden-sm-up">
-                        <hr>
-                        <p>Hier komt een call to action, link naar de nieuwsbrief en een link naar het productiedossier</p>
-                        <hr style="margin-bottom:70px">
-
+                <!-- begin mobile footer -->
+                <div class="row mobile-footer">
+                        <div class="col-12 hidden-sm-up">
+                            <hr>
+                            <p>
+                                <div>
+                                    <span class="instagram"></span>
+                                    <span class="facebook"></span>
+                                    <span class="twitter"></span>
+                                </div>
+                                Productiedossier
+                                <br> Boek ons nu!</p>
+                            <hr>
+                        </div>
                     </div>
-                </div>
+                    <!-- einde mobile footer -->
             </div>
         </div>
     </div>
-    <!-- begin footer -->
-    <div class="rotated hidden-sm-down footer">
-        <span id="facebook" style="width:20px; height:20px; "></span>
-        <span id="instagram" style="width:20px; height:20px; "></span>
-        <span id="twitter" style="width:20px; height:20px; "></span>
+   <!-- begin footer -->
+   <div class="rotated hidden-sm-down footer">
+        <span class="facebook"></span>
+        <span class="instagram"></span>
+        <span class="twitter"></span>
         <span>| Productiedossier | Boek ons nu!</span>
     </div>
     <!-- einde footer -->
