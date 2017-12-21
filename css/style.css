@@ -97,6 +97,20 @@ hr {
   border-color: black;
 }
 
+/* The animation code */
+@keyframes example {
+  0%   {left:850px; top:0px;}
+  100% {left:0px; top:0px;}
+}
+
+/* The element to apply the animation to */
+.hoofdtitel {
+  width: 100px;
+  height: 100px;
+  animation-name: example;
+  animation-duration: 1s;
+}
+
 .footer span {
   color: #ed6e2c;
 }
