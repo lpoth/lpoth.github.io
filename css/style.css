@@ -17,6 +17,11 @@ img {
 
 /** -------------------------------- Navigatiebalk **/
 
+.navbar-toggler {
+  top: -30px;
+  border-color: black;
+}
+
 .navbar-nav {
   text-align: center;
 }
@@ -24,6 +29,10 @@ img {
 .navbar a {
   color: #ed6e2c;
   font-size: 12px;
+}
+
+.navbar a:hover, .active{
+  font-weight: bold;
 }
 
 .bg-faded {
@@ -38,13 +47,26 @@ img {
 
 .navbar-toggleable-md .navbar-nav .nav-link {
   padding-right: 14px;
-   padding-left: 0;
+  padding-left: 0;
 }
 
 /** -------------------------------- Footer **/
 
 .mobile-footer {
   color: #ed6e2c;
+}
+
+.boeken, .dossier {
+  text-decoration: none;
+  color: #ed6e2c;
+  font-size: 20px;
+}
+
+.boeken:hover, .dossier:hover {
+  text-decoration: none;
+  color: #ed6e2c;
+  font-size: 20px;
+font-weight: bold;
 }
 
 /** -------------------------------- Titels **/
@@ -80,29 +102,32 @@ hr {
 }
 
 .facebook {
-  background-image: url("../images/facebook.png");
+  background-image: url("../images/Icoontjes.svg");
+  background-position:-91px;
   background-size: cover;
-  width: 20px;
-  height:20px;
+  width: 25px;
+  height:25px;
   display:inline-block;
-  margin-left:4px;
+  margin-bottom:-3px;
 }
 
 .instagram {
-  background-image: url("../images/instagram.png");
+  background-image: url("../images/Icoontjes.svg");  
   background-size: cover;
-  width: 20px;
-  height:20px;
+  width: 25px;
+  height:25px;
   display:inline-block;
+  margin-bottom:-3px;
 }
 
 .twitter {
-  background-image: url("../images/twitter.png");
+  background-image: url("../images/Icoontjes.svg");
+  background-position:-46px;
   background-size: cover;
-  width: 20px;
-  height:20px;
+  width: 25px;
+  height:25px;
   display:inline-block;
-  margin-left:5px;
+  margin-bottom:-3px;
 }
 
 .logo {
@@ -171,6 +196,15 @@ hr {
   height: 250px;
 }
 
+iframe {
+  margin-bottom: 30px;
+  filter: grayscale(100%);
+}
+  
+.over-foto {
+  margin-bottom: 20px;
+}
+
 /** ---------------------------------------------------------------------- DESKTOP **/
 
 @media screen and (min-width: 480px) {
@@ -213,6 +247,7 @@ hr {
 
   .over-foto {
     margin-top:30px;
+    margin-bottom: 20px;
   }
 
   .tussentitel {
