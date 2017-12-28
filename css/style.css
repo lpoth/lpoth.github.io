@@ -5,6 +5,7 @@
 
 body {
   background-color: #fffef6;
+  overflow-x: hidden;
 }
 
 
@@ -236,8 +237,8 @@ iframe {
   .rotated {
     transform: rotate(-90deg);
     position: fixed;
-    left: -120px;
-    bottom: 250px;
+    left: -180px;
+    bottom: 270px;
   }
   
   .rotated li,
