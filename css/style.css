@@ -20,7 +20,9 @@ img {
 
 .navbar-toggler {
   top: -30px;
-  border-color: black;
+  border-color: #ed6e2c;
+  border-radius: 0px;
+  right:0px;
 }
 
 .navbar-nav {
@@ -49,6 +51,10 @@ img {
 .navbar-toggleable-md .navbar-nav .nav-link {
   padding-right: 14px;
   padding-left: 0;
+}
+
+.fa-bars {
+  color: #ed6e2c;
 }
 
 /** -------------------------------- Footer **/
