@@ -60,13 +60,11 @@ img {
 .boeken, .dossier {
   text-decoration: none;
   color: #ed6e2c;
-  font-size: 20px;
 }
 
 .boeken:hover, .dossier:hover {
   text-decoration: none;
   color: #ed6e2c;
-  font-size: 20px;
 font-weight: bold;
 }
 
@@ -247,6 +245,19 @@ iframe {
     display: inline-block;
   }
 
+  .boeken, .dossier {
+    text-decoration: none;
+    color: #ed6e2c;
+    font-size: 20px;
+  }
+  
+  .boeken:hover, .dossier:hover {
+    text-decoration: none;
+    color: #ed6e2c;
+    font-size: 20px;
+  font-weight: bold;
+  }
+
   /** -------------------------------- Home desktop **/
 
   #home_foto {
@@ -302,6 +313,5 @@ iframe {
 
   #kaart {
     padding:0;
-    margin:O;
   }
 }
